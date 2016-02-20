@@ -7,48 +7,107 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
   <body>
-    <header>
-      <h1>My Albums</h1>
-    </header>
-    <div class="container">
+      <!-- BEGIN ALL SECTIONS HOLDER -->
       <div class="section-holder">
-        <section class="homepage">
-          <ul>
-            <li><img src="*" alt="" />
-              <h3>Album 1</h3>
-            </li>
-            <li><img src="*" alt="" />
-              <h3>Album 2</h3>
-            </li>
-            <li><img src="*" alt="" />
-              <h3>Album 3</h3>
-            </li>
-            <li><img src="*" alt="" />
-              <h3>Album 4</h3>
-            </li>
-            <li><img src="*" alt="" />
-              <h3>Album 5</h3>
-            </li>
-            <li><img src="*" alt="" />
-              <h3>Album 6</h3>
-            </li>
-          </ul> <!-- END OF UNORDERED LIST -->
+
+        <!-- BEGIN ALBUM SECTION -->
+        <section id="homepage">
+          <header><h1>My Albums</h1></header>
+          <div class="container">
+            <ul>
+              <li><a href="#" class=""><div class="album-wrapper"><img src="http://www.fillmurray.com/200/250" alt="" /><h3>Album 1</h3></div></a></li>
+              <li><a href="#" class=""><div class="album-wrapper"><img src="http://www.fillmurray.com/200/250" alt="" /><h3>Album 2</h3></div></a></li>
+              <li><a href="#" class=""><div class="album-wrapper"><img src="http://www.fillmurray.com/200/250" alt="" /><h3>Album 3</h3></div></a></li>
+              <li><a href="#" class=""><div class="album-wrapper"><img src="http://www.fillmurray.com/200/250" alt="" /><h3>Album 4</h3></div></a></li>
+              <li><a href="#" class=""><div class="album-wrapper"><img src="http://www.fillmurray.com/200/250" alt="" /><h3>Album 5</h3></div></a></li>
+              <li><a href="#" class=""><div class="album-wrapper"><img src="http://www.fillmurray.com/200/250" alt="" /><h3>Album 6</h3></div></a></li>
+            </ul>
+        </div>
         </section>
+        <!-- END OF ALBUM SECTION -->
 
-        <section class="albums-page">
 
+        <!-- START OF PHOTOS SECTION -->
+        <!-- START OF LEFT ASIDE SECTION -->
+        <section date-role="page" id="photos-page">
+          <aside class="left-buttons">
+            <ul>
+              <li>
+                <div class="button-1">
+                  <h4>Album 1</h4>
+                </div>
+              </li>
+              <li>
+                <div class="button-2">
+                  <h4>Album 2</h4>
+                </div>
+              </li>
+              <li>
+                <div class="button-3">
+                  <h4>Album 3</h4>
+                </div>
+              </li>
+              <li>
+                <div class="button-4">
+                  <h4>Album 4</h4>
+                </div>
+              </li>
+              <li>
+                <div class="button-5">
+                  <h4>Album 5</h4>
+                </div>
+              </li>
+              <li>
+                <div class="button-6">
+                  <h4>Album 6</h4>
+                </div>
+              </li>
+            </ul>
+          </aside>
+          <!-- END OF ASIDE WITH LEFT BUTTONS -->
+
+
+          <div class="right-col">
+            <h1 class="album-headline">Album 1</h1>
+            <div class="container">
+              <ul>
+                <li><a href="#" class=""><div class="photo-wrapper"><img src="http://www.fillmurray.com/200/250" alt="" /><h3>Photo 1</h3></div></a></li>
+                <li><a href="#" class=""><div class="photo-wrapper"><img src="http://www.fillmurray.com/200/250" alt="" /><h3>Photo 2</h3></div></a></li>
+                <li><a href="#" class=""><div class="photo-wrapper"><img src="http://www.fillmurray.com/200/250" alt="" /><h3>Photo 3</h3></div></a></li>
+                <li><a href="#" class=""><div class="photo-wrapper"><img src="http://www.fillmurray.com/200/250" alt="" /><h3>Photo 4</h3></div></a></li>
+                <li><a href="#" class=""><div class="photo-wrapper"><img src="http://www.fillmurray.com/200/250" alt="" /><h3>Photo 5</h3></div></a></li>
+                <li><a href="#" class=""><div class="photo-wrapper"><img src="http://www.fillmurray.com/200/250" alt="" /><h3>Photo 6</h3></div></a></li>
+              </ul>
+          </div>
         </section>
+        <!-- END OF PHOTOS-PAGE SECTION -->
 
-        <section class="big-photo">
 
+
+        <!-- START OF BIG PHOTO SECTION -->
+        <section data-role="page" id="big-photo-section">
+          <div class="bigPicContainer">
+            <div class="nav">
+              <div class="backToAlbum">
+                <h2>Back to Album 1</h2>
+              </div>
+              <div class="photoNumber">
+                <h1>Photo 1</h1>
+              </div>
+            </div>
+            <div class="bigPic">
+              <img src="http://www.fillmurray.com/200/250" alt="" />
+            </div>
+          </div>
         </section>
+        <!-- END OF BIG PHOTO SECTION -->
 
-      </div> <!-- END MAIN SECTION -->
-    </div> <!-- END OF CONTAINER -->
+    </div> <!-- END OF SECTION HOLDER -->
+
     <footer>
       <h3>Some Footer Text Here</h3>
     </footer>
-
+    <script src="bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
   </body>
 </html>

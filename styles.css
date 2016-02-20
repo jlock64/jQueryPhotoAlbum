@@ -1,5 +1,6 @@
 body {
-  background-color: #ccc; }
+  background-color: #ccc;
+  margin: 0 auto; }
 
 * {
   box-sizing: border-box; }
@@ -14,33 +15,140 @@ header {
   header h1 {
     color: #fff; }
 
-.container {
-  margin: 10px auto;
-  padding: 0;
-  width: 960px; }
-
-section.homepage {
+/***************************************
+            ALBUMS SECTION
+***************************************/
+section#homepage {
   margin: 0;
   padding: 0; }
-  section.homepage ul {
-    margin: 50px 0;
+  section#homepage div.container {
+    margin: 0 auto;
+    width: 80%; }
+  section#homepage div.album-wrapper {
+    background-color: #333;
+    margin-bottom: 20px; }
+  section#homepage ul {
+    margin: 0;
+    padding-top: 20px;
+    list-style-type: none; }
+  section#homepage li {
+    width: 30%;
+    display: inline-block;
+    margin-right: 28px; }
+  section#homepage img {
+    width: 100%;
+    border: 1px solid #000; }
+  section#homepage h3 {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0; }
+
+/***************************************
+            PHOTOS SECTION
+***************************************/
+aside.left-buttons {
+  display: inline-block;
+  width: 20%;
+  margin: 0;
+  padding: 0;
+  background-color: #000; }
+  aside.left-buttons ul {
+    margin: 0;
+    padding: 150px 0;
+    list-style-type: none; }
+  aside.left-buttons div {
+    text-align: center;
+    background-color: #000; }
+  aside.left-buttons h4 {
+    font-size: 26px;
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    width: 90%;
+    margin-left: 12px; }
+
+h1.album-headline {
+  display: inline-block;
+  font-size: 60px; }
+
+.right-col {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  width: 79%;
+  text-align: center; }
+  .right-col div.container {
+    margin: 0 auto;
+    width: 80%; }
+  .right-col ul {
+    margin: 0;
     padding: 0;
     list-style-type: none; }
-  section.homepage li {
+  .right-col li {
     margin-bottom: 25px;
     display: inline-block;
-    width: 33%;
-    text-align: center; }
-  section.homepage img {
-    width: 240px;
-    height: 300px;
+    width: 30%;
+    text-align: center;
+    margin-left: 20px; }
+  .right-col div.photo-wrapper {
+    background-color: #333;
+    margin-bottom: 20px; }
+  .right-col img {
+    width: 100%;
     border: 1px solid #000; }
-  section.homepage h3 {
-    color: #eee;
-    text-align: center; }
+  .right-col h3 {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0; }
 
+/***************************************
+                BIG PHOTO SECTION
+***************************************/
+section#big-photo-section div.bigPicContainer {
+  width: 80%;
+  margin: 0 auto; }
+
+section#big-photo-section div.nav {
+  text-align: left; }
+
+section#big-photo-section div.backToAlbum {
+  display: inline-block;
+  text-align: center;
+  margin-left: 50px; }
+
+section#big-photo-section h2 {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  padding: 10px 75px;
+  font-size: 20px; }
+
+section#big-photo-section div.photoNumber {
+  display: inline-block;
+  margin-left: 150px; }
+
+section#big-photo-section h1 {
+  color: #000;
+  font-size: 60px;
+  margin: 20px 0 0 0; }
+
+section#big-photo-section div.bigPic {
+  width: 600px;
+  margin: 50px auto;
+  border: 3px solid grey; }
+  section#big-photo-section div.bigPic img {
+    width: 100%; }
+
+/***************************************
+                FOOTER
+***************************************/
 footer {
   margin: 0 auto;
   padding: 10px;
   width: 100%;
-  background-color: #333; }
+  background-color: #333;
+  text-align: center; }
