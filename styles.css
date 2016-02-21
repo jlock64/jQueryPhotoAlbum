@@ -15,6 +15,9 @@ header {
   header h1 {
     color: #fff; }
 
+.hidden {
+  display: none; }
+
 /***************************************
             ALBUMS SECTION
 ***************************************/
@@ -36,13 +39,15 @@ section#homepage {
     display: inline-block;
     margin-right: 28px; }
   section#homepage img {
-    width: 100%;
+    width: 287px;
+    height: 200px;
     border: 1px solid #000; }
   section#homepage h3 {
     margin: 0;
     text-align: center;
     color: #fff;
-    padding: 10px 0; }
+    padding: 10px 0;
+    text-transform: uppercase; }
 
 /***************************************
             PHOTOS SECTION
@@ -96,7 +101,8 @@ h1.album-headline {
     background-color: #333;
     margin-bottom: 20px; }
   .right-col img {
-    width: 100%;
+    width: 233px;
+    height: 200px;
     border: 1px solid #000; }
   .right-col h3 {
     margin: 0;
@@ -137,7 +143,7 @@ section#big-photo-section h1 {
   margin: 20px 0 0 0; }
 
 section#big-photo-section div.bigPic {
-  width: 600px;
+  width: 700px;
   margin: 50px auto;
   border: 3px solid grey; }
   section#big-photo-section div.bigPic img {
