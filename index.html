@@ -5,6 +5,7 @@
     <title>jQuery Photo Album</title>
   </head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
   <body>
       <!-- BEGIN ALL SECTIONS HOLDER -->
@@ -50,12 +51,12 @@
             <h1 class="album-headline">Album 1</h1>
             <div class="container">
               <ul id="surfing">
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing1.jpg" alt="" /><h3>Photo 1</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing2.jpg" alt="" /><h3>Photo 2</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing3.jpg" alt="" /><h3>Photo 3</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing4.jpg" alt="" /><h3>Photo 4</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing5.jpg" alt="" /><h3>Photo 5</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing6.jpg" alt="" /><h3>Photo 6</h3></div></a></li>
+                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing1.jpg" alt="1" /><h3>Photo 1</h3></div></a></li>
+                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing2.jpg" alt="2" /><h3>Photo 2</h3></div></a></li>
+                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing3.jpg" alt="3" /><h3>Photo 3</h3></div></a></li>
+                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing4.jpg" alt="4" /><h3>Photo 4</h3></div></a></li>
+                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing5.jpg" alt="5" /><h3>Photo 5</h3></div></a></li>
+                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing6.jpg" alt="6" /><h3>Photo 6</h3></div></a></li>
               </ul>
               <ul id="snow" class="hidden">
                 <li><a href="#" class=""><div class="photo-wrapper"><img src="images/snow1.jpg" alt="" /><h3>Photo 1</h3></div></a></li>
@@ -116,6 +117,8 @@
             </div>
             <div class="bigPic">
               <img src="images/surfing1.jpg" alt="" />
+              <span class="mega-octicon octicon-chevron-right next"></span>
+              <span class="mega-octicon octicon-chevron-left previous"></span>
             </div>
           </div>
         </section>

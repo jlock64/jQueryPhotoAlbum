@@ -143,11 +143,24 @@ section#big-photo-section h1 {
   margin: 20px 0 0 0; }
 
 section#big-photo-section div.bigPic {
+  position: relative;
   width: 700px;
   margin: 50px auto;
   border: 3px solid grey; }
   section#big-photo-section div.bigPic img {
     width: 100%; }
+  section#big-photo-section div.bigPic .octicon-chevron-right {
+    font-size: 70px;
+    color: #555;
+    position: absolute;
+    top: 180px;
+    right: -70px; }
+  section#big-photo-section div.bigPic .octicon-chevron-left {
+    font-size: 70px;
+    color: #555;
+    position: absolute;
+    top: 180px;
+    left: -70px; }
 
 /***************************************
                 FOOTER

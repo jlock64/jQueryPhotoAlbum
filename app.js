@@ -24,9 +24,7 @@ $('.homeButton').click(function(){
 });
 
 
-//when a photo is clicked on photos page that picture and it's src or url is displayed
-//in the bigPic page.
-
+//  BIG PICTURE //
 $('.photo-wrapper img').click(function() {
   // event.defaultPrevent();
   var imageSrc = $(this).attr('src');
@@ -36,41 +34,41 @@ $('.photo-wrapper img').click(function() {
 
 //when a certain album is clicked all the photos on the photos page will turn their sources
 //into the corresponding src attribute
-$('.albumSnow-wrapper').click(function() {
-  event.preventDefault();
-  $('#snow').siblings('ul').addClass('hidden');
-  $('#snow').removeClass('hidden');
-});
-$('.albumSurf-wrapper').click(function() {
+$('.albumSurf-wrapper, .button-1').click(function() {
   event.preventDefault();
   $('#surfing').siblings('ul').addClass('hidden');
   $('#surfing').removeClass('hidden');
 });
-$('.albumDogs-wrapper').click(function() {
+$('.albumSnow-wrapper, .button-2').click(function() {
+  event.preventDefault();
+  $('#snow').siblings('ul').addClass('hidden');
+  $('#snow').removeClass('hidden');
+});
+$('.albumDogs-wrapper, .button-3').click(function() {
   event.preventDefault();
   $('#dogs').siblings('ul').addClass('hidden');
   $('#dogs').removeClass('hidden');
 });
-$('.albumSunsets-wrapper').click(function() {
+$('.albumSunsets-wrapper, .button-4').click(function() {
   event.preventDefault();
   $('#sunsets').siblings('ul').addClass('hidden');
   $('#sunsets').removeClass('hidden');
 });
-$('.albumTropics-wrapper').click(function() {
+$('.albumTropics-wrapper, .button-5').click(function() {
   event.preventDefault();
   $('#tropics').siblings('ul').addClass('hidden');
   $('#tropics').removeClass('hidden');
 });
-$('.albumFood-wrapper').click(function() {
+$('.albumFood-wrapper, .button-6').click(function() {
   event.preventDefault();
   $('#food').siblings('ul').addClass('hidden');
   $('#food').removeClass('hidden');
 });
 
-// var snowImages = {
-//   snow1: "file:///Users/Home/theIronYardAssignments/jQueryPhotoAlbum/images/snow1.jpg",
-//   snow2: "file:///Users/Home/theIronYardAssignments/jQueryPhotoAlbum/images/snow2.jpg"
-// }
+//when the arrow is clicked the next picture
+// $('.octicon-chevron-right').click(function() {
+//   $('.bigPic img').attr('alt');
+// });
 
 
 
