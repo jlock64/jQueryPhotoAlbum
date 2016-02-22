@@ -143,4 +143,4 @@ $('#foodAlbum, .button-6').click(function() {
 
 
 
-}) // END OF JQUERY
+}) // END OF JQUERY PAGE
