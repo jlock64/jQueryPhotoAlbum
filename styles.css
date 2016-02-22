@@ -1,5 +1,4 @@
 body {
-  background-color: #ccc;
   margin: 0 auto; }
 
 * {
@@ -11,12 +10,19 @@ header {
   width: 100%;
   background-color: #333;
   text-align: center;
-  padding: 20px; }
+  padding: 20px;
+  box-shadow: 3px 3px 10px #777; }
   header h1 {
-    color: #fff; }
+    margin: 0;
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase; }
 
 .hidden {
   display: none; }
+
+.section-holder {
+  background-color: #ccc; }
 
 /***************************************
             ALBUMS SECTION
@@ -26,22 +32,28 @@ section#homepage {
   padding: 0; }
   section#homepage div.container {
     margin: 0 auto;
+    padding: 50px 0;
     width: 80%; }
   section#homepage div.album-wrapper {
     background-color: #333;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    border: 1px solid #777;
+    box-shadow: 5px 5px 20px #777;
+    transition: all .2s ease-in-out; }
+  section#homepage .album-wrapper:hover {
+    box-shadow: 1px 1px 8px #999;
+    transform: scale(0.99); }
   section#homepage ul {
     margin: 0;
-    padding-top: 20px;
+    padding: 28px 0px 8px 85px;
     list-style-type: none; }
   section#homepage li {
-    width: 30%;
+    width: 28%;
     display: inline-block;
     margin-right: 28px; }
   section#homepage img {
-    width: 287px;
-    height: 200px;
-    border: 1px solid #000; }
+    width: 100%;
+    height: 200px; }
   section#homepage h3 {
     margin: 0;
     text-align: center;
@@ -50,32 +62,40 @@ section#homepage {
     text-transform: uppercase; }
 
 /***************************************
-            PHOTOS SECTION
+        PHOTOS & BUTTONS SECTION
 ***************************************/
 aside.left-buttons {
   display: inline-block;
   width: 20%;
   margin: 0;
   padding: 0;
-  background-color: #000; }
+  background-color: #333; }
+  aside.left-buttons .container {
+    width: 95%;
+    margin: 0 auto; }
   aside.left-buttons ul {
     margin: 0;
-    padding: 150px 0;
+    padding: 103px 0;
     list-style-type: none; }
   aside.left-buttons div {
     text-align: center;
-    background-color: #000; }
+    background-color: #333; }
   aside.left-buttons h4 {
     font-size: 26px;
     background-color: #fff;
     color: #000;
     padding: 10px;
     width: 90%;
-    margin-left: 12px; }
+    margin-left: 12px;
+    border-radius: 5px; }
+  aside.left-buttons h4:hover {
+    cursor: pointer;
+    transform: scale(1.05); }
 
 h1.album-headline {
   display: inline-block;
-  font-size: 60px; }
+  font-size: 60px;
+  text-shadow: 5px 5px 20px #fff; }
 
 .right-col {
   display: inline-block;
@@ -86,7 +106,7 @@ h1.album-headline {
   text-align: center; }
   .right-col div.container {
     margin: 0 auto;
-    width: 80%; }
+    width: 90%; }
   .right-col ul {
     margin: 0;
     padding: 0;
@@ -99,23 +119,30 @@ h1.album-headline {
     margin-left: 20px; }
   .right-col div.photo-wrapper {
     background-color: #333;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    border: 1px solid #777;
+    box-shadow: 5px 5px 20px #777;
+    transition: all .2s ease-in-out; }
+  .right-col div.photo-wrapper:hover {
+    box-shadow: 1px 1px 8px #999;
+    transform: scale(0.99); }
   .right-col img {
-    width: 233px;
-    height: 200px;
-    border: 1px solid #000; }
+    width: 100%;
+    height: 200px; }
   .right-col h3 {
     margin: 0;
     text-align: center;
     color: #fff;
-    padding: 10px 0; }
+    padding: 10px 0;
+    text-transform: uppercase; }
 
 /***************************************
                 BIG PHOTO SECTION
 ***************************************/
 section#big-photo-section div.bigPicContainer {
-  width: 80%;
-  margin: 0 auto; }
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 200px; }
 
 section#big-photo-section div.nav {
   text-align: left; }
@@ -123,7 +150,7 @@ section#big-photo-section div.nav {
 section#big-photo-section div.backToAlbum {
   display: inline-block;
   text-align: center;
-  margin-left: 50px; }
+  vertical-align: middle; }
 
 section#big-photo-section h2 {
   display: inline-block;
@@ -131,35 +158,45 @@ section#big-photo-section h2 {
   background-color: #fff;
   color: #000;
   padding: 10px 75px;
-  font-size: 20px; }
+  font-size: 20px;
+  box-shadow: 2px 2px 20px #444;
+  transition: all .2s ease-in-out; }
+
+section#big-photo-section h2:hover {
+  box-shadow: 1px 1px 10px #444;
+  cursor: pointer;
+  transform: scale(1.05); }
 
 section#big-photo-section div.photoNumber {
   display: inline-block;
-  margin-left: 150px; }
+  margin-left: 150px;
+  vertical-align: middle; }
 
 section#big-photo-section h1 {
-  color: #000;
-  font-size: 60px;
-  margin: 20px 0 0 0; }
+  display: inline-block;
+  margin-left: 35px;
+  vertical-align: middle;
+  font-size: 60px; }
 
 section#big-photo-section div.bigPic {
   position: relative;
-  width: 700px;
-  margin: 50px auto;
-  border: 3px solid grey; }
+  width: 800px;
+  margin: 0 auto;
+  transition: all .3sec ease-in-out; }
   section#big-photo-section div.bigPic img {
-    width: 100%; }
+    width: 100%;
+    border: 2px solid #fff; }
   section#big-photo-section div.bigPic .octicon-chevron-right {
     font-size: 70px;
     color: #555;
     position: absolute;
-    top: 180px;
+    top: 215px;
     right: -70px; }
   section#big-photo-section div.bigPic .octicon-chevron-left {
     font-size: 70px;
     color: #555;
     position: absolute;
-    top: 180px;
+    top: 215px;
     left: -70px; }
 
 /***************************************
@@ -171,3 +208,5 @@ footer {
   width: 100%;
   background-color: #333;
   text-align: center; }
+  footer h3 {
+    margin: 0; }
