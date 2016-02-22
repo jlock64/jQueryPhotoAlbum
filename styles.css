@@ -41,6 +41,7 @@ section#homepage {
     box-shadow: 5px 5px 20px #777;
     transition: all .2s ease-in-out; }
   section#homepage .album-wrapper:hover {
+    cursor: pointer;
     box-shadow: 1px 1px 8px #999;
     transform: scale(0.99); }
   section#homepage ul {

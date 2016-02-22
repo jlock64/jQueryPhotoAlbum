@@ -1,175 +1,185 @@
 
 
-// SURF PICS //
-var surfPics = [
-  {
-    title: 'surf1',
-    url: 'images/surfing1.jpg'
-},
-  {
-    title: 'surf2',
-    url: 'images/surfing2.jpg'
+var albums = [
+  { type: "album",
+    albumTitle: "Surfing",
+    albumURL: "images/surfingAlbumCover.jpg",
+    albumRel: "surfAlbum",
+    photos:  [
+      { name: "Photo1" ,
+        rel: "surf1",
+        url: "images/surfing1.jpg",
+      },
+      { name: "Photo2" ,
+        rel: "surf2",
+        url: "images/surfing2.jpg",
+      },
+      { name: "Photo3" ,
+        rel: "surf3",
+        url: "images/surfing3.jpg",
+      },
+      { name: "Photo4" ,
+        rel: "surf4",
+        url: "images/surfing4.jpg",
+      },
+      { name: "Photo5" ,
+        rel: "surf5",
+        url: "images/surfing5.jpg",
+      },
+      { name: "Photo6" ,
+        rel: "surf6",
+        url: "images/surfing6.jpg",
+      }] // END OF PHOTOS ARRAY
   },
-  {
-    title: 'surf3',
-    url: 'images/surfing3.jpg'
+  { type: "album",
+    albumTitle: "Snow",
+    albumURL: "images/snowAlbumCover.jpg",
+    albumRel: "snowAlbum",
+    photos:  [
+      { name: "Photo1" ,
+        rel: "snow1",
+        url: "images/snow1.jpg",
+      },
+      { name: "Photo2" ,
+        rel: "snow2",
+        url: "images/snow2.jpg",
+      },
+      { name: "Photo3" ,
+        rel: "snow3",
+        url: "images/snow3.jpg",
+      },
+      { name: "Photo4" ,
+        rel: "snow4",
+        url: "images/snow4.jpg",
+      },
+      { name: "Photo5" ,
+        rel: "snow5",
+        url: "images/snow5.jpg",
+      },
+      { name: "Photo6" ,
+        rel: "snow6",
+        url: "images/snow6.jpg",
+      }] // END OF PHOTOS ARRAY
   },
-  {
-    title: 'surf4',
-    url: 'images/surfing4.jpg'
+  { type: "album",
+    albumTitle: "Dogs",
+    albumURL: "images/dogsAlbumCover.jpg",
+    albumRel: "dogsAlbum",
+    photos:  [
+      { name: "Photo1" ,
+        rel: "dogs1",
+        url: "images/dogs1.jpg",
+      },
+      { name: "Photo2" ,
+        rel: "dogs2",
+        url: "images/dogs2.jpg",
+      },
+      { name: "Photo3" ,
+        rel: "dogs3",
+        url: "images/dogs3.jpg",
+      },
+      { name: "Photo4" ,
+        rel: "dogs4",
+        url: "images/dogs4.jpg",
+      },
+      { name: "Photo5" ,
+        rel: "dogs5",
+        url: "images/dogs5.jpg",
+      },
+      { name: "Photo6" ,
+        rel: "dogs6",
+        url: "images/dogs6.jpg",
+      }] // END OF PHOTOS ARRAY
   },
-  {
-    title: 'surf5',
-    url: 'images/surfing5.jpg'
+  { type: "album",
+    albumTitle: "Sunsets",
+    albumURL: "images/sunsetAlbumCover.jpg",
+    albumRel: "sunsetsAlbum",
+    photos:  [
+      { name: "Photo1" ,
+        rel: "sunset1",
+        url: "images/sunsets1.jpg",
+      },
+      { name: "Photo2" ,
+        rel: "sunset2",
+        url: "images/sunsets2.jpg",
+      },
+      { name: "Photo3" ,
+        rel: "sunset3",
+        url: "images/sunsets3.jpg",
+      },
+      { name: "Photo4" ,
+        rel: "sunset4",
+        url: "images/sunsets4.jpg",
+      },
+      { name: "Photo5" ,
+        rel: "sunset5",
+        url: "images/sunsets5.jpg",
+      },
+      { name: "Photo6" ,
+        rel: "sunset6",
+        url: "images/sunsets6.jpg",
+      }] // END OF PHOTOS ARRAY
   },
-  {
-    title: 'surf6',
-    url: 'images/surfing6.jpg'
+  { type: "album",
+    albumTitle: "Tropics",
+    albumURL: "images/tropicsAlbumCover.jpg",
+    albumRel: "tropicsAlbum",
+    photos:  [
+      { name: "Photo1" ,
+        rel: "tropics1",
+        url: "images/tropics1.jpg",
+      },
+      { name: "Photo2" ,
+        rel: "tropics2",
+        url: "images/tropics2.jpg",
+      },
+      { name: "Photo3" ,
+        rel: "tropics3",
+        url: "images/tropics3.jpg",
+      },
+      { name: "Photo4" ,
+        rel: "tropics4",
+        url: "images/tropics4.jpg",
+      },
+      { name: "Photo5" ,
+        rel: "tropics5",
+        url: "images/tropics5.jpg",
+      },
+      { name: "Photo6" ,
+        rel: "tropics6",
+        url: "images/tropics6.jpg",
+      }] // END OF PHOTOS ARRAY
+  },
+  { type: "album",
+    albumTitle: "Food",
+    albumURL: "images/foodAlbumCover.jpg",
+    albumRel: "foodAlbum",
+    photos:  [
+      { name: "Photo1" ,
+        rel: "food1",
+        url: "images/food1.jpg",
+      },
+      { name: "Photo2" ,
+        rel: "food2",
+        url: "images/food2.jpg",
+      },
+      { name: "Photo3" ,
+        rel: "food3",
+        url: "images/food3.jpg",
+      },
+      { name: "Photo4" ,
+        rel: "food4",
+        url: "images/food4.jpg",
+      },
+      { name: "Photo5" ,
+        rel: "food5",
+        url: "images/food5.jpg",
+      },
+      { name: "Photo6" ,
+        rel: "food6",
+        url: "images/food6.jpg",
+      }] // END OF PHOTOS ARRAY
   }
-];
 
-
-// SNOW PICS //
-var snowPics = [
-  {
-    title: 'snow1',
-    url: 'images/snow1.jpg'
-},
-  {
-    title: 'snow2',
-    url: 'images/snow2.jpg'
-  },
-  {
-    title: 'snow3',
-    url: 'images/snow3.jpg'
-  },
-  {
-    title: 'snow4',
-    url: 'images/snow4.jpg'
-  },
-  {
-    title: 'snow5',
-    url: 'images/snow5.jpg'
-  },
-  {
-    title: 'snow6',
-    url: 'images/snow6.jpg'
-  }
-];
-
-
-// DOG PICS //
-var dogPics = [
-  {
-    title: 'dog1',
-    url: 'images/dogs1.jpg'
-},
-  {
-    title: 'dog2',
-    url: 'images/dogs2.jpg'
-  },
-  {
-    title: 'dog3',
-    url: 'images/dogs3.jpg'
-  },
-  {
-    title: 'dog4',
-    url: 'images/dogs4.jpg'
-  },
-  {
-    title: 'dog5',
-    url: 'images/dogs5.jpg'
-  },
-  {
-    title: 'dog6',
-    url: 'images/dogs6.jpg'
-  }
-];
-
-
-// SUNSET PICS //
-var sunsetPics = [
-  {
-    title: 'sunset1',
-    url: 'images/sunsets1.jpg'
-},
-  {
-    title: 'sunset2',
-    url: 'images/sunsets2.jpg'
-  },
-  {
-    title: 'sunset3',
-    url: 'images/sunsets3.jpg'
-  },
-  {
-    title: 'sunset4',
-    url: 'images/sunsets4.jpg'
-  },
-  {
-    title: 'sunset5',
-    url: 'images/sunsets5.jpg'
-  },
-  {
-    title: 'sunset6',
-    url: 'images/sunsets6.jpg'
-  }
-];
-
-
-// TROPICS PICS //
-var tropicsPics = [
-  {
-    title: 'tropics1',
-    url: 'images/tropics1.jpg'
-},
-  {
-    title: 'tropics2',
-    url: 'images/tropics2.jpg'
-  },
-  {
-    title: 'tropics3',
-    url: 'images/tropics3.jpg'
-  },
-  {
-    title: 'tropics4',
-    url: 'images/tropics4.jpg'
-  },
-  {
-    title: 'tropics5',
-    url: 'images/tropics5.jpg'
-  },
-  {
-    title: 'tropics6',
-    url: 'images/tropics6.jpg'
-  }
-];
-
-
-
-// TROPICS PICS //
-var foodPics = [
-  {
-    title: 'food1',
-    url: 'images/food1.jpg'
-},
-  {
-    title: 'food2',
-    url: 'images/food2.jpg'
-  },
-  {
-    title: 'food3',
-    url: 'images/food3.jpg'
-  },
-  {
-    title: 'food4',
-    url: 'images/food4.jpg'
-  },
-  {
-    title: 'food5',
-    url: 'images/food5.jpg'
-  },
-  {
-    title: 'food6',
-    url: 'images/food6.jpg'
-  }
-];
+] // END OF ALBUMS ARRAY

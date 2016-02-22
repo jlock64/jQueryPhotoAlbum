@@ -50,6 +50,7 @@ section#homepage {
     transition: all .2s ease-in-out;
   }
   .album-wrapper:hover {
+    cursor: pointer;
     box-shadow: 1px 1px 8px #999;
     transform: scale(.99);
   }

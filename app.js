@@ -1,5 +1,59 @@
 $(document).ready(function(){
 
+
+// HOMEPAGE ALBUM GRID //
+var getAlbumCovers = function() {
+  var albumCover = "";
+  albums.forEach(function(el) {
+    albumCover += "<li>"
+    + "<a href=''>"
+    + "<div class='album-wrapper' + id='" + el.albumRel + "'>"
+    + "<img src='" + el.albumURL + "'  />"
+    + "<h3>" + el.albumTitle + "</h3>"
+    + "</div>"
+    + "</a>"
+    + "</li>"
+  });
+    $('#homepage div.container').children('ul').append(albumCover);
+};
+getAlbumCovers(albums);
+
+// GET PHOTOS
+// var albumPhotosArr = albums.map(function(el) {
+//     return el.photos;
+//   });
+// var url = albumPhotosArr.map(function(el) {
+//     return el[0].url;
+//   })
+
+  // "<div class='container'>"
+  //   + "<h1 class='album-headline'>" + el.albumTitle + "</h1>"
+  //   + "<ul>"
+
+// PHOTOS GRID
+// var getPhotos = function() {
+//     var photoCollection = "";
+//     albumPhotosArr.forEach(function(el) {
+//       photoCollection +=
+//         + "<li>"
+//         + "<a href=''>"
+//         + "<div class='photo-wrapper'>"
+//         + "<img src="images/surfing1.jpg" rel="surf1" />"
+//
+//
+//           <h3>Photo 1</h3></div></a></li>
+//           <li><a href="" class=""><div class="photo-wrapper"><img src="images/surfing2.jpg" rel="surf2" /><h3>Photo 2</h3></div></a></li>
+//           <li><a href="" class=""><div class="photo-wrapper"><img src="images/surfing3.jpg" rel="surf3" /><h3>Photo 3</h3></div></a></li>
+//           <li><a href="" class=""><div class="photo-wrapper"><img src="images/surfing4.jpg" rel="surf4" /><h3>Photo 4</h3></div></a></li>
+//           <li><a href="" class=""><div class="photo-wrapper"><img src="images/surfing5.jpg" rel="surf5" /><h3>Photo 5</h3></div></a></li>
+//           <li><a href="" class=""><div class="photo-wrapper"><img src="images/surfing6.jpg" rel="surf6" /><h3>Photo 6</h3></div></a></li>
+//         </ul>
+//       </div>
+//     });
+// };
+//
+
+
 // PAGE NAVIGATION //
 $('.album-wrapper, .backToAlbum').click(function(){
   event.preventDefault();
@@ -43,83 +97,78 @@ $('.photo-wrapper').on('click', 'img', function() {
 });
 
 
-// when the arrow is clicked the next picture
-$('.octicon-chevron-right').click(function() {
-  var bigPicSrc = $('.bigPic img').attr('src');
-
-});
-
-
-
+// // when the arrow is clicked the next picture will display
+// $('.octicon-chevron-right').click(function() {
+//   var bigPicSrc = $('.bigPic img').attr('src');
+//
+// });
 
 // ALBUM PICTURES //
-$('.albumSurf-wrapper, .button-1').click(function() {
+$('#surfAlbum, .button-1').click(function() {
   event.preventDefault();
   $('#surfing').siblings('div').addClass('hidden');
   $('#surfing').removeClass('hidden');
 });
-$('.albumSnow-wrapper, .button-2').click(function() {
+$('#snowAlbum, .button-2').click(function() {
   event.preventDefault();
   $('#snow').siblings('div').addClass('hidden');
   $('#snow').removeClass('hidden');
 });
-$('.albumDogs-wrapper, .button-3').click(function() {
+$('#dogsAlbum, .button-3').click(function() {
   event.preventDefault();
   $('#dogs').siblings('div').addClass('hidden');
   $('#dogs').removeClass('hidden');
 });
-$('.albumSunsets-wrapper, .button-4').click(function() {
+$('#sunsetsAlbum, .button-4').click(function() {
   event.preventDefault();
   $('#sunsets').siblings('div').addClass('hidden');
   $('#sunsets').removeClass('hidden');
 });
-$('.albumTropics-wrapper, .button-5').click(function() {
+$('#tropicsAlbum, .button-5').click(function() {
   event.preventDefault();
   $('#tropics').siblings('div').addClass('hidden');
   $('#tropics').removeClass('hidden');
 });
-$('.albumFood-wrapper, .button-6').click(function() {
+$('#foodAlbum, .button-6').click(function() {
   event.preventDefault();
   $('#food').siblings('div').addClass('hidden');
   $('#food').removeClass('hidden');
 });
 
-//
-// var picPosts = "";
-// surfPics.forEach(function(item) {
-//   picPosts += '<ul id="pics"'
+
+// // ALBUM PICTURES //
+// $('.albumSurf-wrapper, .button-1').click(function() {
+//   event.preventDefault();
+//   $('#surfing').siblings('div').addClass('hidden');
+//   $('#surfing').removeClass('hidden');
 // });
-// <ul id="surfing">
-//   <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing1.jpg" title="surf1" alt="1" /><h3>Photo 1</h3></div></a></li>
-//   <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing2.jpg" title="surf2" alt="2" /><h3>Photo 2</h3></div></a></li>
-//   <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing3.jpg" title="surf3" alt="3" /><h3>Photo 3</h3></div></a></li>
-//   <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing4.jpg" title="surf4" alt="4" /><h3>Photo 4</h3></div></a></li>
-//   <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing5.jpg" title="surf5" alt="5" /><h3>Photo 5</h3></div></a></li>
-//   <li><a href="#" class=""><div class="photo-wrapper"><img src="images/surfing6.jpg" title="surf6" alt="6" /><h3>Photo 6</h3></div></a></li>
-// </ul>
+// $('.albumSnow-wrapper, .button-2').click(function() {
+//   event.preventDefault();
+//   $('#snow').siblings('div').addClass('hidden');
+//   $('#snow').removeClass('hidden');
+// });
+// $('.albumDogs-wrapper, .button-3').click(function() {
+//   event.preventDefault();
+//   $('#dogs').siblings('div').addClass('hidden');
+//   $('#dogs').removeClass('hidden');
+// });
+// $('.albumSunsets-wrapper, .button-4').click(function() {
+//   event.preventDefault();
+//   $('#sunsets').siblings('div').addClass('hidden');
+//   $('#sunsets').removeClass('hidden');
+// });
+// $('.albumTropics-wrapper, .button-5').click(function() {
+//   event.preventDefault();
+//   $('#tropics').siblings('div').addClass('hidden');
+//   $('#tropics').removeClass('hidden');
+// });
+// $('.albumFood-wrapper, .button-6').click(function() {
+//   event.preventDefault();
+//   $('#food').siblings('div').addClass('hidden');
+//   $('#food').removeClass('hidden');
+// });
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-})
+}) // END OF JQUERY
