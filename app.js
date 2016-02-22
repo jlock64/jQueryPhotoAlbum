@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
 
-// HOMEPAGE ALBUM GRID //
-var getAlbumCovers = function() {
+// ADDING ALBUM COVERS TO HOMEPAGE
+function getAlbumCovers() {
   var albumCover = "";
   albums.forEach(function(el) {
     albumCover += "<li>"
@@ -18,40 +18,50 @@ var getAlbumCovers = function() {
 };
 getAlbumCovers(albums);
 
-// GET PHOTOS
-// var albumPhotosArr = albums.map(function(el) {
-//     return el.photos;
+// ADDING PHOTOS TO PHOTOS PAGE
+// function addPhotos() {
+//   var photoStr ="";
+//   albums.forEach(function(el) {
+//     photoStr += "<div id='" + el.albumTitle + "' class='container'>"
+//     + "<h1 class='album-headline'>" + el.albumTitle + "</h1>"
+//     + "</div>"
 //   });
-// var url = albumPhotosArr.map(function(el) {
-//     return el[0].url;
-//   })
-
-  // "<div class='container'>"
-  //   + "<h1 class='album-headline'>" + el.albumTitle + "</h1>"
-  //   + "<ul>"
-
-// PHOTOS GRID
-// var getPhotos = function() {
-//     var photoCollection = "";
-//     albumPhotosArr.forEach(function(el) {
-//       photoCollection +=
-//         + "<li>"
-//         + "<a href=''>"
-//         + "<div class='photo-wrapper'>"
-//         + "<img src="images/surfing1.jpg" rel="surf1" />"
-//
-//
-//           <h3>Photo 1</h3></div></a></li>
-//           <li><a href="" class=""><div class="photo-wrapper"><img src="images/surfing2.jpg" rel="surf2" /><h3>Photo 2</h3></div></a></li>
-//           <li><a href="" class=""><div class="photo-wrapper"><img src="images/surfing3.jpg" rel="surf3" /><h3>Photo 3</h3></div></a></li>
-//           <li><a href="" class=""><div class="photo-wrapper"><img src="images/surfing4.jpg" rel="surf4" /><h3>Photo 4</h3></div></a></li>
-//           <li><a href="" class=""><div class="photo-wrapper"><img src="images/surfing5.jpg" rel="surf5" /><h3>Photo 5</h3></div></a></li>
-//           <li><a href="" class=""><div class="photo-wrapper"><img src="images/surfing6.jpg" rel="surf6" /><h3>Photo 6</h3></div></a></li>
-//         </ul>
-//       </div>
-//     });
+//   var photoArr = albums.map(function(el) { // creates my array off all photos
+//   return el.photos;
+// });
+//   photoArr.forEach(function(el) {
+//     photoStr += "<ul>"
+//     + "<li>"
+//     + "<a href='' >"
+//     + "<div class='photo-wrapper'>"
+//     + "<img src='" + el.url + "' + rel='" + el.rel + "' />"
+//     + "<h3>" + el.name + "</h3>"
+//     + "</div>"
+//     + "</a>"
+//     + "</li>"
+//     + "</ul>"
+// });
+//   $('.right-col').append('photoStr');
 // };
+// addPhotos(albums);
 //
+// // PULL PHOTOS FROM ALBUM SELECTED
+// function getPhotos(albumSelected) {
+//   var photoArr = albums.filter (function (item) {
+//     return item.albumRel === albumSelected;
+//   });
+//   return photoArr[0].photos;
+// };
+
+// SELECTING PHOTOS
+// var photoTmpl = _.template($('#albumSelectedPhotos').html()); // create template function. Selecting id of script in head #albumSelectedPhotos and grabbing all it's HTML. --> Now called photoTmpl
+// // photoTmpl(albums[0].photos[0]) will return 1st array's 1st photo
+// // <li><a href="" ><div class="photo-wrapper"><img src="images/surfing1.jpg"rel="surf1" /><h3>Photo1</h3></div></a></li>
+// // Now need to loop over each photo in each album
+// albums[0].photos.forEach(function(el) {
+//   console.log(photoTmpl(el));
+// })  // this will log all 6 photos in 1st album array --> surfing
+
 
 
 // PAGE NAVIGATION //
@@ -97,13 +107,7 @@ $('.photo-wrapper').on('click', 'img', function() {
 });
 
 
-// // when the arrow is clicked the next picture will display
-// $('.octicon-chevron-right').click(function() {
-//   var bigPicSrc = $('.bigPic img').attr('src');
-//
-// });
-
-// ALBUM PICTURES //
+// SELECTING ALBUM PICTURES //
 $('#surfAlbum, .button-1').click(function() {
   event.preventDefault();
   $('#surfing').siblings('div').addClass('hidden');
@@ -135,38 +139,6 @@ $('#foodAlbum, .button-6').click(function() {
   $('#food').removeClass('hidden');
 });
 
-
-// // ALBUM PICTURES //
-// $('.albumSurf-wrapper, .button-1').click(function() {
-//   event.preventDefault();
-//   $('#surfing').siblings('div').addClass('hidden');
-//   $('#surfing').removeClass('hidden');
-// });
-// $('.albumSnow-wrapper, .button-2').click(function() {
-//   event.preventDefault();
-//   $('#snow').siblings('div').addClass('hidden');
-//   $('#snow').removeClass('hidden');
-// });
-// $('.albumDogs-wrapper, .button-3').click(function() {
-//   event.preventDefault();
-//   $('#dogs').siblings('div').addClass('hidden');
-//   $('#dogs').removeClass('hidden');
-// });
-// $('.albumSunsets-wrapper, .button-4').click(function() {
-//   event.preventDefault();
-//   $('#sunsets').siblings('div').addClass('hidden');
-//   $('#sunsets').removeClass('hidden');
-// });
-// $('.albumTropics-wrapper, .button-5').click(function() {
-//   event.preventDefault();
-//   $('#tropics').siblings('div').addClass('hidden');
-//   $('#tropics').removeClass('hidden');
-// });
-// $('.albumFood-wrapper, .button-6').click(function() {
-//   event.preventDefault();
-//   $('#food').siblings('div').addClass('hidden');
-//   $('#food').removeClass('hidden');
-// });
 
 
 

@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
+  <script type="text/template" id="albumSelectedPhotos">
+    <li><a href="" ><div class="photo-wrapper"><img src="<%=url%>"rel="<%=rel%>" /><h3><%=name%></h3></div></a></li>
+  </script>
   <body>
       <!-- BEGIN ALL SECTIONS HOLDER -->
       <div class="section-holder">
@@ -31,7 +34,7 @@
 
         <!-- START OF PHOTOS SECTION -->
         <!-- START OF LEFT ASIDE SECTION -->
-        <section date-custom="page" id="photos-page" class="hidden">
+        <section id="photos-page" class="hidden">
           <aside class="left-buttons">
             <div class="container">
               <ul>
@@ -149,6 +152,7 @@
       <h3>Some Footer Text Here</h3>
     </footer>
     <script src="bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="bower_components/underscore/underscore.js" charset="utf-8"></script>
     <script src="objects.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
   </body>
