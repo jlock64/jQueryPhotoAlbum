@@ -7,8 +7,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="styles.css" media="screen" title="no title" charset="utf-8">
-  <script type="text/template" id="albumSelectedPhotos">
-    <li><a href="" ><div class="photo-wrapper"><img src="<%=url%>"rel="<%=rel%>" /><h3><%=name%></h3></div></a></li>
+  <script type="text/template" id="albumsHomePage">
+    <li><a href=""><div class="album-wrapper" id="<%= albumRel %>">
+    <img src="<%= albumURL %>"/><h3><%= albumTitle %></h3></div></a></li>
+  </script>
+  <script type="text/template" id="photoContainerTmpl">
+    <div id="<%= albumTitle %>" class="container"><h1 class="album-headline"><%= albumTitle %></h1><ul>
+  </script>
+  <script type="text/template" id="photoTmpl">
+    <li><a href=""><div class="photo-wrapper"><img src="<%= url %> rel="<%= rel %>"/><h3><%= name %></h3></div></a></li>
   </script>
   <body>
       <!-- BEGIN ALL SECTIONS HOLDER -->
@@ -20,20 +27,12 @@
           <header><h1>My Albums</h1></header>
           <div class="container">
             <ul id="albums">
-              <!-- <li><a href="" ><div class="album-wrapper albumSurf-wrapper"><img src="images/surfingAlbumCover.jpg" rel="surfAlbum" /><h3>Surfing</h3></div></a></li>
-              <li><a href="" ><div class="album-wrapper albumSnow-wrapper"><img src="images/snowAlbumCover.jpg" rel="snowAlbum" /><h3>Snow</h3></div></a></li>
-              <li><a href="" ><div class="album-wrapper albumDogs-wrapper"><img src="images/dogsAlbumCover.jpg" rel="dogsAlbum" /><h3>Dogs</h3></div></a></li>
-              <li><a href="" ><div class="album-wrapper albumSunsets-wrapper"><img src="images/sunsetAlbumCover.jpg" rel="sunsetsAlbum" /><h3>Sunsets</h3></div></a></li>
-              <li><a href="" ><div class="album-wrapper albumTropics-wrapper"><img src="images/tropicsAlbumCover.jpg" rel="tropicsAlbum" /><h3>Tropics</h3></div></a></li>
-              <li><a href="" ><div class="album-wrapper albumFood-wrapper"><img src="images/foodAlbumCover.jpg" rel="foodAlbum" /><h3>Food</h3></div></a></li> -->
             </ul>
         </div>
         </section>
-        <!-- END OF ALBUM SECTION -->
 
 
         <!-- START OF PHOTOS SECTION -->
-        <!-- START OF LEFT ASIDE SECTION -->
         <section id="photos-page" class="hidden">
           <aside class="left-buttons">
             <div class="container">
@@ -48,82 +47,13 @@
               </ul>
             </div>
           </aside>
-          <!-- END OF ASIDE WITH LEFT BUTTONS -->
 
 
           <!-- ALBUM PHOTOS -->
           <div class="right-col">
-            <!-- <h1 class="album-headline">Album 1</h1> -->
-            <div id="surfing" class="container">
-              <h1 class="album-headline">Surfing</h1>
-              <ul>
-                <li><a href="" ><div class="photo-wrapper"><img src="images/surfing1.jpg" rel="surf1" /><h3>Photo 1</h3></div></a></li>
-                <li><a href="" ><div class="photo-wrapper"><img src="images/surfing2.jpg" rel="surf2" /><h3>Photo 2</h3></div></a></li>
-                <li><a href="" ><div class="photo-wrapper"><img src="images/surfing3.jpg" rel="surf3" /><h3>Photo 3</h3></div></a></li>
-                <li><a href="" ><div class="photo-wrapper"><img src="images/surfing4.jpg" rel="surf4" /><h3>Photo 4</h3></div></a></li>
-                <li><a href="" ><div class="photo-wrapper"><img src="images/surfing5.jpg" rel="surf5" /><h3>Photo 5</h3></div></a></li>
-                <li><a href="" ><div class="photo-wrapper"><img src="images/surfing6.jpg" rel="surf6" /><h3>Photo 6</h3></div></a></li>
-              </ul>
-            </div>
-            <div id="snow" class="container hidden">
-              <h1 class="album-headline">Snow</h1>
-              <ul>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/snow1.jpg" rel="snow1" /><h3>Photo 1</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/snow2.jpg" rel="snow2" /><h3>Photo 2</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/snow3.jpg" rel="snow3" /><h3>Photo 3</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/snow4.jpg" rel="snow4" /><h3>Photo 4</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/snow5.jpg" rel="snow5" /><h3>Photo 5</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/snow6.jpg" rel="snow6" /><h3>Photo 6</h3></div></a></li>
-              </ul>
-            </div>
-            <div id="dogs" class="container">
-              <h1 class="album-headline">Dogs</h1>
-              <ul>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/dogs1.jpg" rel="dogs1" /><h3>Photo 1</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/dogs2.jpg" rel="dogs2" /><h3>Photo 2</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/dogs3.jpg" rel="dogs3" /><h3>Photo 3</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/dogs4.jpg" rel="dogs4" /><h3>Photo 4</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/dogs5.jpg" rel="dogs5" /><h3>Photo 5</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/dogs6.jpg" rel="dogs6" /><h3>Photo 6</h3></div></a></li>
-              </ul>
-            </div>
-            <div id="sunsets" class="container">
-              <h1 class="album-headline">Sunsets</h1>
-              <ul>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/sunsets1.jpg" rel="sunset1" /><h3>Photo 1</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/sunsets2.jpg" rel="sunset2" /><h3>Photo 2</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/sunsets3.jpg" rel="sunset3" /><h3>Photo 3</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/sunsets4.jpg" rel="sunset4" /><h3>Photo 4</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/sunsets5.jpg" rel="sunset5" /><h3>Photo 5</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/sunsets6.jpg" rel="sunset6" /><h3>Photo 6</h3></div></a></li>
-              </ul>
-            </div>
-            <div id="tropics" class="container">
-              <h1 class="album-headline">Tropics</h1>
-              <ul>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/tropics1.jpg" rel="tropics1" /><h3>Photo 1</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/tropics2.jpg" rel="tropics2" /><h3>Photo 2</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/tropics3.jpg" rel="tropics3" /><h3>Photo 3</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/tropics4.jpg" rel="tropics4" /><h3>Photo 4</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/tropics5.jpg" rel="tropics5" /><h3>Photo 5</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/tropics6.jpg" rel="tropics6" /><h3>Photo 6</h3></div></a></li>
-              </ul>
-            </div>
-            <div id="food" class="container">
-              <h1 class="album-headline">Food</h1>
-              <ul>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/food1.jpg" rel="food1" /><h3>Photo 1</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/food2.jpg" rel="food2" /><h3>Photo 2</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/food3.jpg" rel="food3" /><h3>Photo 3</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/food4.jpg" rel="food4" /><h3>Photo 4</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/food5.jpg" rel="food5" /><h3>Photo 5</h3></div></a></li>
-                <li><a href="#" class=""><div class="photo-wrapper"><img src="images/food6.jpg" rel="food6" /><h3>Photo 6</h3></div></a></li>
-              </ul>
-            </div>
 
           </div>
         </section>
-        <!-- END OF PHOTOS-PAGE SECTION -->
 
 
         <!-- START OF BIG PHOTO SECTION -->

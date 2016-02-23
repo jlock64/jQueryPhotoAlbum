@@ -1,56 +1,74 @@
 $(document).ready(function(){
 
-
 // ADDING ALBUM COVERS TO HOMEPAGE
-function getAlbumCovers() {
+var albumTemplate = _.template($('#albumsHomePage').html());
   var albumCover = "";
   albums.forEach(function(el) {
-    albumCover += "<li>"
-    + "<a href=''>"
-    + "<div class='album-wrapper' + id='" + el.albumRel + "'>"
-    + "<img src='" + el.albumURL + "'  />"
-    + "<h3>" + el.albumTitle + "</h3>"
-    + "</div>"
-    + "</a>"
-    + "</li>"
+    albumCover += albumTemplate(el);
   });
     $('#homepage div.container').children('ul').append(albumCover);
-};
-getAlbumCovers(albums);
+
+
 
 // ADDING PHOTOS TO PHOTOS PAGE
-// function addPhotos() {
-//   var photoStr ="";
-//   albums.forEach(function(el) {
-//     photoStr += "<div id='" + el.albumTitle + "' class='container'>"
-//     + "<h1 class='album-headline'>" + el.albumTitle + "</h1>"
-//     + "</div>"
-//   });
-//   var photoArr = albums.map(function(el) { // creates my array off all photos
-//   return el.photos;
+function addPhotos() {
+  var photoContainerTmpl = _.template($('#photoContainerTmpl').html());
+  var photoTmpl = _.template($('#photoTmpl').html());
+  var photoStr = "";
+  albums.forEach(function(el) {
+    photoStr += photoContainerTmpl(el);
+
+    el.photos.forEach(function (item) {
+      photoStr += "<li>"
+      + "<a href='' >"
+      + "<div class='photo-wrapper'>"
+      + "<img src='" + item.url + "' + rel='" + item.rel + "' />"
+      + "<h3>" + item.name + "</h3>"
+      + "</div>"
+      + "</a>"
+      + "</li>";
+    })
+    photoStr += "</ul>"
+    photoStr += "</div>"
+  });
+  $('.right-col').append(photoStr);
+};
+addPhotos(albums);
+
+
+
+// This gives me an array of list items on homepage
+// var selectedPhotoAlbums = "";
+// $('#albums').children('li').on('click', function (event) {
+//   event.preventDefault();
+//   $('#photos-page').siblings('section').addClass('hidden');
+//   $('#photos-page').removeClass('hidden');
+//   selectedPhotoAlbums = ($(this).attr('id')); // --> gives me #surfAlbum is surf clicked
+//   // showPhotoAlbums(selectedPhotoAlbums);
 // });
-//   photoArr.forEach(function(el) {
-//     photoStr += "<ul>"
-//     + "<li>"
-//     + "<a href='' >"
-//     + "<div class='photo-wrapper'>"
-//     + "<img src='" + el.url + "' + rel='" + el.rel + "' />"
-//     + "<h3>" + el.name + "</h3>"
-//     + "</div>"
-//     + "</a>"
-//     + "</li>"
-//     + "</ul>"
-// });
-//   $('.right-col').append('photoStr');
-// };
-// addPhotos(albums);
-//
+
 // // PULL PHOTOS FROM ALBUM SELECTED
 // function getPhotos(albumSelected) {
-//   var photoArr = albums.filter (function (item) {
-//     return item.albumRel === albumSelected;
+//   var photoArr = albums.filter (function (el) {
+//     console.log('ive been clicked');
+//     return el.albumRel === albumSelected;
 //   });
-//   return photoArr[0].photos;
+//   // return photoArr[0].photos;
+// };
+
+// var showPhotoAlbums = function(albumPagePhotos) {
+// var photoStr = "";
+// _.each(getPhotos(selectedPhotoAlbums), function (el) {
+//       photoStr += "<li>"
+//       + "<a href='' >"
+//       + "<div class='photo-wrapper'>"
+//       + "<img src='" + el.url + "' + rel='" + el.rel + "' />"
+//       + "<h3>" + el.name + "</h3>"
+//       + "</div>"
+//       + "</a>"
+//       + "</li>"
+//   });
+// $('.right-col').children('ul').append(photoStr);
 // };
 
 // SELECTING PHOTOS
@@ -107,36 +125,38 @@ $('.photo-wrapper').on('click', 'img', function() {
 });
 
 
+
+
 // SELECTING ALBUM PICTURES //
 $('#surfAlbum, .button-1').click(function() {
   event.preventDefault();
-  $('#surfing').siblings('div').addClass('hidden');
-  $('#surfing').removeClass('hidden');
+  $('#Surfing').siblings('div').addClass('hidden');
+  $('#Surfing').removeClass('hidden');
 });
 $('#snowAlbum, .button-2').click(function() {
   event.preventDefault();
-  $('#snow').siblings('div').addClass('hidden');
-  $('#snow').removeClass('hidden');
+  $('#Snow').siblings('div').addClass('hidden');
+  $('#Snow').removeClass('hidden');
 });
 $('#dogsAlbum, .button-3').click(function() {
   event.preventDefault();
-  $('#dogs').siblings('div').addClass('hidden');
-  $('#dogs').removeClass('hidden');
+  $('#Dogs').siblings('div').addClass('hidden');
+  $('#Dogs').removeClass('hidden');
 });
 $('#sunsetsAlbum, .button-4').click(function() {
   event.preventDefault();
-  $('#sunsets').siblings('div').addClass('hidden');
-  $('#sunsets').removeClass('hidden');
+  $('#Sunsets').siblings('div').addClass('hidden');
+  $('#Sunsets').removeClass('hidden');
 });
 $('#tropicsAlbum, .button-5').click(function() {
   event.preventDefault();
-  $('#tropics').siblings('div').addClass('hidden');
-  $('#tropics').removeClass('hidden');
+  $('#Tropics').siblings('div').addClass('hidden');
+  $('#Tropics').removeClass('hidden');
 });
 $('#foodAlbum, .button-6').click(function() {
   event.preventDefault();
-  $('#food').siblings('div').addClass('hidden');
-  $('#food').removeClass('hidden');
+  $('#Food').siblings('div').addClass('hidden');
+  $('#Food').removeClass('hidden');
 });
 
 
