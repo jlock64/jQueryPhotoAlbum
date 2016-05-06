@@ -10,7 +10,7 @@ var albumTemplate = _.template($('#albumsHomePage').html());
 
 
 
-// ADDING PHOTOS TO PHOTOS PAGE
+// ADDING PHOTOS TO PHOTOS PAGE //
 function addPhotos() {
   var photoContainerTmpl = _.template($('#photoContainerTmpl').html());
   var photoTmpl = _.template($('#photoTmpl').html());
